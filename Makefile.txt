@@ -1,0 +1,20 @@
+CXX = icpc
+FLAGS = -c -O2
+
+OBJECTS = Hermite_Coulomb.o
+
+ctreecode.exe : $(OBJECTS)
+	$(CXX) -o ctreecode *.o -lm
+
+Hermite_Coulomb.o : Hermite_Coulomb.cpp
+	$(CXX) $(FLAGS) Hermite_Coulomb.cpp
+
+clean : 
+	\rm -f *.o *~ ctreecode
+
+
+
+
+
+
+
